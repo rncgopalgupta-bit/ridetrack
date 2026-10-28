@@ -323,12 +323,23 @@ flutter test
 
 ---
 
-## 📱 Screenshots & Visual Evidence
+## 📱 Video Demo & Visual Verification
 
-| Live Tracking & Clustering (M1) | Real-Time FCM Assignment Alert (M3) |
+### 🎥 Real-Device Screen Recording
+- **File:** [`docs/recordings/ridetrack_preview.mp4`](docs/recordings/ridetrack_preview.mp4) (Full Android device run, ~2 min / 15MB)
+- **Included Evidence:** Live GPS tracking on Google Maps, Android ongoing background service notification drawer, In-app and push assignment alerts, Custom camera viewfinder with parcel bounding frame & GPS watermark, Background Isolate EXIF baking & image compression, Offline delivery queue, and Auto-sync upon network reconnection.
+
+### 📸 Core Feature Screenshots (Android Real Device)
+
+| 1. Live Tracking on Map | 2. Android Notification Drawer | 3. Camera Capture & EXIF |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/01_live_tracking_map.jpg" width="240"/> | <img src="docs/screenshots/02_background_notification_drawer.jpg" width="240"/> | <img src="docs/screenshots/03_camera_capture_viewfinder.jpg" width="240"/> |
+| *Live agent marker (10s updates), active delivery zones & top assignment banner* | *Foreground ongoing service notification + system push alert* | *Custom parcel viewfinder with GPS telemetry & background Isolate compression* |
+
+| 4. Offline Sync on Reconnect | 5. OEM Battery Optimization Audit |
 | :---: | :---: |
-| <img src="docs/screenshots/01_live_tracking_map.png" width="320"/> | <img src="docs/screenshots/02_push_notification_alert.png" width="320"/> |
-| *Smooth 15s agent marker, custom clusters & telemetry* | *Foreground assignment alert with 1-tap deep-link* |
+| <img src="docs/screenshots/04_offline_sync_reconnect.jpg" width="240"/> | <img src="docs/screenshots/05_oem_battery_diagnostics.jpg" width="240"/> |
+| *Offline queue transitioning to [Synced] upon network restoration* | *OEM battery optimization status, vendor auto-start instructions & diagnostics* |
 
 ---
 
@@ -349,6 +360,15 @@ As required by the Cynosure Technologies assessment brief:
 ```
 ridetrack/
 ├── .env.example                               # Environment template with placeholder API keys
+├── docs/
+│   ├── recordings/
+│   │   └── ridetrack_preview.mp4              # Full Android real-device video demonstration
+│   └── screenshots/                           # Real-device visual evidence captures
+│       ├── 01_live_tracking_map.jpg
+│       ├── 02_background_notification_drawer.jpg
+│       ├── 03_camera_capture_viewfinder.jpg
+│       ├── 04_offline_sync_reconnect.jpg
+│       └── 05_oem_battery_diagnostics.jpg
 ├── lib/
 │   ├── core/
 │   │   ├── constants/app_constants.dart      # App-wide constants & database schema config
